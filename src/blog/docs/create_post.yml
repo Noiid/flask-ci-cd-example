@@ -1,0 +1,30 @@
+  tags:
+    - Posts
+  responses:
+    201:
+      description: Post created
+      content:
+        application/json:
+          example:
+            id: "1"
+            title: Post title
+            content: Post content
+  parameters:
+    - in: body
+      name: body
+      required: true
+      schema:
+        type: object
+        properties:
+          title:
+            type: string
+            example: Post title
+          content:
+            type: string
+            example: Post content
+          author:
+            type: string
+            example: Author name
+          category:
+            type: string
+            example: Tech

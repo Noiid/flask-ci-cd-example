@@ -1,0 +1,31 @@
+{
+        "tags": ["Posts"],
+        "responses": {
+            200: {
+                "description": "List of posts",
+                "content": {
+                    "application/json": {
+                        "example": [
+                            {
+                                "id": "1",
+                                "title": "Post title",
+                                "content": "Post content",
+                                "author": "Author name",
+                                "category": "Tech",
+                            }
+                        ]
+                    }
+                },
+            },
+            400: {"description": "Invalid category"},
+        },
+        "parameters": [
+            {
+                "in": "path",
+                "name": "category",
+                "required": True,
+                "type": "string",
+                "enum": ["Tech", "Business", "Health", "Sports"],
+            }
+        ],
+}

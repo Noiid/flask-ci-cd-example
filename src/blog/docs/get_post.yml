@@ -1,0 +1,21 @@
+tags:
+  - Posts
+parameters:
+  - in: path
+    name: id
+    required: true
+    type: integer
+    example: "1"
+responses:
+  200:
+    description: Post found
+    content:
+      application/json:
+        example:
+          id: "1"
+          title: Post title
+          content: Post content
+          author: Author name
+          category: Tech
+  404:
+    description: Post not found

@@ -1,0 +1,21 @@
+  {
+        "tags": ["Posts"],
+        "responses": {
+            200: {
+                "description": "List of posts",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {"type": "integer"},
+                            "title": {"type": "string"},
+                            "content": {"type": "string"},
+                            "author": {"type": "string"},
+                            "category": {"type": "string"},
+                        },
+                    },
+                },
+            }
+        },
+    }
