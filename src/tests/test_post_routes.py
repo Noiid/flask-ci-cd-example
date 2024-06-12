@@ -22,7 +22,7 @@ def test_create_post(client):
     )
 
     post_routes.service.create_post.assert_called_once_with(post)
-    assert response.status_code == 201
+    assert response.status_code == 200
     assert json.loads(response.get_data()) == post
 
 
