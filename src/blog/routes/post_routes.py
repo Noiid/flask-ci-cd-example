@@ -18,7 +18,7 @@ def create_post():
     except ValueError as e:
         return {"error": str(e)}, 400
 
-    return {}, 200
+    return post, 201
 
 
 @post_routes.route("/posts/<string:id>", methods=["GET"])
