@@ -1,13 +1,15 @@
 name: Demo Blog App
 
+# Set trigger
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
+# Step by step job
 jobs:
-  run-linters-and-pytest:
-    name: Run Linters and Pytest
+  run-pytest:
+    name: Run Pytest
     runs-on: ubuntu-latest
     steps:
       - name: Checkout branch
