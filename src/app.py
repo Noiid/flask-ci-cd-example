@@ -8,7 +8,7 @@ swagger = Swagger(app)
 
 @app.route("/")
 def home():
-    return "OK"
+    return "OK Connected!"
 
 
 @app.errorhandler(404)
